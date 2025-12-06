@@ -1,0 +1,12 @@
+/* Bloque principal */
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+/* Elemento: texto del mensaje */
+.empty-state__text {
+    font-size: 16px;
+    font-style: italic;
+}

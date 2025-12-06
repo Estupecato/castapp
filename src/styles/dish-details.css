@@ -1,0 +1,57 @@
+/* Bloque principal */
+.dish-detail {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Elementos */
+.dish-detail__title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #2d2d2d;
+    text-align: center;
+}
+
+.dish-detail__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.dish-detail__desc {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.dish-detail__price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2d6cdf;
+    text-align: right;
+}
+
+.dish-detail__btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dish-detail__btn:hover {
+    background: #1a4bb8;
+}

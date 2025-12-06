@@ -1,0 +1,6 @@
+/* Bloque principal: contenedor en grilla responsiva */
+.dish-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}

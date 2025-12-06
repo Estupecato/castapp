@@ -1,0 +1,63 @@
+/* 1) Reset básico para asegurar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2) Estilos globales del body */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* 3) Contenedor principal del layout */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 4) Área principal de contenido */
+.layout__main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* 5) Estilos globales para enlaces */
+a {
+    color: #2d6cdf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 6) Estilos globales para botones */
+button {
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 7) Utilidades comunes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,43 @@
+/* Bloque principal */
+.home {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Elementos */
+.home__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.home__subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.home__featured {
+    margin-top: 30px;
+}
+
+.home__featured-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.home__cta {
+    margin-top: 40px;
+}
+
+.home__cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2d6cdf;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.home__cta-btn:hover {
+    background: #1a4bb8;
+}

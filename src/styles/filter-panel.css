@@ -1,0 +1,12 @@
+.filter-panel {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-panel__select {
+    padding: 6px 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
