@@ -8,9 +8,26 @@ import '../styles/dish-card.css';
 export default function DishCard({ dish }) {
     // 4) Carrito persistente en localStorage.
     const [cart, setCart] = useLocalStorage('cart', []);
-    // 5) Función para añadir al carrito: agrega id, nombre, precio y cantidad.
-    const addToCart = () =>
-        setCart([...cart, { id: dish.id, name: dish.name, price: dish.price, qty: 1 }]);
+
+    // 5) Función para añadir al carrito:
+    //    - Si ya existe el producto, incrementa qty.
+    //    - Si no existe, lo agrega con qty: 1.
+    const addToCart = () => {
+        setCart(prevCart => {
+            const exists = prevCart.find(item => item.id === dish.id);
+            if (exists) {
+                return prevCart.map(item =>
+                    item.id === dish.id
+                        ? { ...item, qty: item.qty + 1 }
+                        : item
+                );
+            }
+            return [
+                ...prevCart,
+                { id: dish.id, name: dish.name, price: dish.price, qty: 1 }
+            ];
+        });
+    };
 
     // 6) Render de la tarjeta con BEM.
     return (
@@ -22,14 +39,18 @@ export default function DishCard({ dish }) {
                 <h3 className="dish-card__title">{dish.name}</h3>
                 <p className="dish-card__meta">{dish.category}</p>
                 <p className="dish-card__price">${dish.price.toFixed(2)}</p>
-                {/* 9) Etiquetas como badges: vegano, sin gluten, picosito. */}
+
+                {/* 9) Etiquetas como badges: vegano, sin gluten, picante. */}
                 <div className="dish-card__tags">
-                    {dish.tags.map(t => <Badge key={t} label={t} />)}
+                    {dish.tags?.map(t => <Badge key={t} label={t} />)}
                     {dish.spicy && <Badge label="picante" />}
                     {dish.glutenFree && <Badge label="sin gluten" />}
                 </div>
+
                 {/* 10) Botón para añadir al carrito. */}
-                <button className="dish-card__btn" onClick={addToCart}>Añadir</button>
+                <button className="dish-card__btn" onClick={addToCart}>
+                    Añadir
+                </button>
             </div>
         </article>
     );
