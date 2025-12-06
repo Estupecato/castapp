@@ -1,8 +1,8 @@
 // 1) Importamos React para usar JSX.
 import React from 'react';
-// 2) Importamos la tarjeta de plato que renderizaremos dentro de la grilla.
+// 2) Importamos la tarjeta de plato que renderizaremos dentro del grill.
 import DishCard from './DishCard.jsx';
-// 3) Importamos el CSS de la grilla (opcional, pero recomendado).
+// 3) Importamos el CSS del grill(opcional, pero recomendado).
 import '../styles/dish-grid.css';
 
 // 4) Componente funcional: recibe 'dishes' (array de platos) como prop.

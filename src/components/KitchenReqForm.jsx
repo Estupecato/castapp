@@ -1,7 +1,7 @@
 // 1) Importa useState para manejar el formulario controlado.
 import { useState } from 'react';
 // 2) Importa estilos de la vista/form.
-import '../styles/kitchen.css';
+import '../styles/orders.css';
 
 // 3) Recibe listas y callback onSubmit para procesar la solicitud.
 export default function KitchenReqForm({ kitchens, dishes, onSubmit }) {

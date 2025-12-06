@@ -6,6 +6,8 @@
     display: grid;
     grid-template-rows: 160px auto;
     transition: box-shadow 0.2s ease;
+    /* Hacemos la tarjeta relativa para posicionar mensajes dentro de ella */
+    position: relative;
 }
 
 .dish-card:hover {
@@ -33,6 +35,18 @@
     margin: 0 0 8px;
 }
 
+/* Descripción corta del platillo
+   - La truncamos a 2 líneas para que las tarjetas no crezcan demasiado. */
+.dish-card__desc {
+    color: #555;
+    font-size: 13px;
+    margin: 0 0 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* muestra hasta 2 líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* oculta el resto del texto */
+}
+
 .dish-card__price {
     font-weight: 600;
     margin: 0 0 12px;
@@ -57,4 +71,18 @@
 /* Modificadores de ejemplo */
 .dish-card__btn--danger {
     background: #d7263d;
+}
+
+/* Mensajito temporal que aparece cuando agregamos algo al carrito */
+.dish-card__feedback {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background: #2e7d32; /* verde agradable */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    pointer-events: none; /* no bloquea clics en el botón */
 }

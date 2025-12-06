@@ -59,13 +59,7 @@ export default function Menu() {
                     dishes={DISHES}
                 />
             </div>
-            <div className="menu__list">
-                {DISHES.map(dish => (
-                    <DishCard key={dish.id} dish={dish} />
-                ))}
-            </div>
-
-            {/* 16) Renderiza la grilla o un estado vacío si no hay resultados. */}
+            {/* 16) Solo mostramos la grilla filtrada. Si no hay resultados, aparece un estado vacío. */}
             {filtered.length ? (
                 <DishGrid dishes={filtered} />
             ) : (

@@ -6,6 +6,8 @@
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    /* Hacemos relativo el contenedor para posicionar el mensajito dentro */
+    position: relative;
 }
 
 /* Elementos */
@@ -54,4 +56,18 @@
 
 .dish-detail__btn:hover {
     background: #1a4bb8;
+}
+
+/* Mensaje temporal de confirmación al añadir al carrito */
+.dish-detail__feedback {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    background: #2e7d32; /* verdecito agradable */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    pointer-events: none; /* no bloquea clics */
 }

@@ -1,0 +1,174 @@
+/* ==========================
+   ESTILOS PARA LA VISTA DE ÓRDENES (COCINA)
+   - Comentarios sencillos para entender qué hace cada regla.
+   - Usamos una convención de nombres BEM (bloque__elemento--modificador).
+   ========================== */
+
+/* Bloque principal de la vista Orders: le damos un poco de espacio */
+.orders {
+    padding: 20px;
+}
+
+/* Título grande de la sección */
+.orders__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+}
+
+/* Texto que aparece cuando no hay pedidos guardados */
+.orders__empty {
+    color: #666;
+    background: #fff;
+    border: 1px dashed #bbb;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+/* La grilla donde se muestran todas las tarjetas de pedidos */
+.orders__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+/* Cada tarjeta individual de pedido */
+.orders__card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 12px;
+    display: grid;
+    gap: 10px;
+}
+
+/* Encabezado de la tarjeta: id, fecha y estado */
+.orders__header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.orders__id {
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.orders__date {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Píldora de estatus (color cambia según el estado) */
+.orders__status {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Colores por estado */
+.status-activo {
+    background: #e3f2fd; /* azul muy claro */
+    color: #0d47a1;      /* azul fuerte */
+}
+
+.status-cancelado {
+    background: #ffebee; /* rojo muy claro */
+    color: #b71c1c;      /* rojo fuerte */
+}
+
+/* Lista de productos dentro del pedido */
+.orders__items {
+    padding-left: 18px; /* sangría para bullets */
+    color: #333;
+}
+
+.orders__items li {
+    margin-bottom: 4px;
+}
+
+/* Pie de la tarjeta: total y botón cancelar */
+.orders__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.orders__total {
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.orders__cancel-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #d7263d; /* rojo */
+    color: #fff;
+    cursor: pointer;
+}
+
+.orders__cancel-btn:hover {
+    background: #b31f32;
+}
+
+/* ==========================
+   ABAJO DEJAMOS LOS ESTILOS DEL FORMULARIO DE COCINA
+   - Otro componente (KitchenReqForm) los sigue usando.
+   ========================== */
+/* Bloque del formulario de cocina */
+.kitchen-form {
+    display: grid;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Filas del formulario */
+.kitchen-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Etiquetas */
+.kitchen-form__label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Inputs, selects y textarea */
+.kitchen-form__select,
+.kitchen-form__input,
+.kitchen-form__textarea {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.kitchen-form__textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Botón de enviar */
+.kitchen-form__btn {
+    padding: 10px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.kitchen-form__btn:hover {
+    background: #1a4bb8;
+}

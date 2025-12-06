@@ -10,7 +10,7 @@ export default function Nav() {
             <a href="/" className="nav__link">Inicio</a>
             <a href="/menu" className="nav__link">Menú</a>
             <a href="/cart" className="nav__link">Carrito</a>
-            <a href="/kitchen" className="nav__link">Cocina</a>
+            <a href="/kitchen" className="nav__link">Pedidos</a>
             <a href="/admin" className="nav__link">Admin</a>
         </nav>
     );

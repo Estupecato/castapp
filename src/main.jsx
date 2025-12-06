@@ -14,7 +14,7 @@ import Home from './routes/Home.jsx';
 import Menu from './routes/Menu.jsx';
 import DishDetail from './routes/DishDetail.jsx';
 import Cart from './routes/Cart.jsx';
-import Kitchen from './routes/Kitchen.jsx';
+import Orders from './routes/Orders.jsx';
 import Admin from './routes/Admin.jsx';
 import NotFound from './routes/NotFound.jsx';
 
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             // 12) Carrito/pedido del cliente.
             { path: 'cart', element: <Cart /> },
             // 13) Vista de cocina/solicitudes.
-            { path: 'kitchen', element: <Kitchen /> },
+            { path: 'kitchen', element: <Orders /> },
             // 14) Sección administrativa básica.
             { path: 'admin', element: <Admin /> },
             // 15) Captura cualquier ruta no definida.

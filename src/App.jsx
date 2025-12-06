@@ -9,14 +9,14 @@ export default function App() {
     return (
         // 4) Bloque BEM del layout.
         <div className="layout">
-            {/* 5) encabezado persistente con navegación. */}
+            {/* 5) encabezado con navegación. */}
             <Header />
             {/* 6) Contenedor principal donde se renderizan las rutas hijas. */}
             <main className="layout__main">
                 {/* 7) Outlet inserta el componente de la ruta actual aquí. */}
                 <Outlet />
             </main>
-            {/* 8) Pie persistente. */}
+            {/* 8) Pie de pagina . */}
             <Footer />
         </div>
     );

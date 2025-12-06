@@ -1,8 +1,140 @@
+/* ==========================
+   estilos para el carrito bonito
+   quiero que se parezca al de pedidos pero aplicado a items
+   ========================== */
+
+/* bloque principal de la vista */
 .cart {
     padding: 20px;
 }
 
+/* titulo grande */
 .cart__title {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #2d2d2d;
 }
+
+/* mensaje cuando no hay items */
+.cart__empty {
+    color: #666;
+    background: #fff;
+    border: 1px dashed #bbb;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+/* contenedor en grilla para las tarjetas */
+.cart__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+/* tarjeta individual del item */
+.cart__card {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+/* imagen del platillo */
+.cart__image {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* cuerpo de la tarjeta */
+.cart__body { display: grid; gap: 8px; }
+
+/* encabezado con nombre y cantidad tipo pill */
+.cart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart__name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.cart__qty {
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e3f2fd; /* azul muy claro */
+    color: #0d47a1;      /* azul fuerte */
+}
+
+/* descripcion corta con truncado a 2 lineas */
+.cart__desc {
+    color: #555;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* pie de la tarjeta con subtotal y accion */
+.cart__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cart__subtotal {
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+/* boton para quitar 1 unidad */
+.cart__remove {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #d7263d; /* rojo */
+    color: #fff;
+}
+
+.cart__remove:hover { background: #b31f32; }
+
+/* resumen final con total y boton de confirmar */
+.cart__summary {
+    margin-top: 16px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart__total {
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.cart__checkout {
+    padding: 10px 14px;
+    background: #2d6cdf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+
+.cart__checkout:hover { background: #1a4bb8; }
