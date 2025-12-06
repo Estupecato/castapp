@@ -12,6 +12,7 @@ import EmptyState from '../components/EmptyState.jsx';
 
 // 4) Estilos de la vista.
 import '../styles/menu.css';
+import DishCard from "../components/DishCard.jsx";
 
 // 5) Componente de la página Menú.
 export default function Menu() {
