@@ -38,7 +38,7 @@
 /* Descripción corta del platillo
    - La truncamos a 2 líneas para que las tarjetas no crezcan demasiado. */
 .dish-card__desc {
-    color: #b31f32;
+    color: #555555;
     font-size: 13px;
     margin: 0 0 8px;
     display: -webkit-box;
