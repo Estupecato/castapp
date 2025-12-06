@@ -49,6 +49,7 @@ export default function Menu() {
                 <SearchBar onSearch={setQuery} />
 
                 {/* 15) Panel de filtros: categorías y etiquetas disponibles. */}
+
                 <FilterPanel
                     category={category}
                     onCategoryChange={setCategory}
@@ -57,6 +58,12 @@ export default function Menu() {
                     dishes={DISHES}
                 />
             </div>
+            <div className="menu__list">
+                {DISHES.map(dish => (
+                    <DishCard key={dish.id} dish={dish} />
+                ))}
+            </div>
+
             {/* 16) Renderiza la grilla o un estado vacío si no hay resultados. */}
             {filtered.length ? (
                 <DishGrid dishes={filtered} />

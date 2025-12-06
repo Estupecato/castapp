@@ -18,3 +18,9 @@
     gap: 20px;
     margin-bottom: 20px;
 }
+
+.menu__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
