@@ -21,7 +21,7 @@ import NotFound from './routes/NotFound.jsx';
 // 5) Importa estilos base globales.
 import './styles/base.css';
 
-// 6) Define el árbol de rutas con Router v6.
+// 6) Define el árbol de rutas con Router.
 const router = createBrowserRouter([
     {
         // 7) Ruta raíz que usa App como layout.
