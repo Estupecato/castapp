@@ -1,4 +1,5 @@
 # React + Vite
+Hecho por Jorge C para tarea de masetria Actividad 1. El resto del contenido que se puede leer aqui se dejara de esta manera por fines educacionales.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
