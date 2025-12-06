@@ -1,6 +1,6 @@
 import React from 'react';
 import OrderSummary from '../components/OrderSummary.jsx';
-import useLocalStorage from '../hooks/useLocalStorage.js';
+import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
 export default function Cart() {
     // items = [{ id, name, price, qty }]
