@@ -1,29 +1,37 @@
-// 1) Importa el hook de localStorage y componentes de carrito.
-import { useLocalStorage } from '../hooks/useLocalStorage.js';
+import React from 'react';
 import OrderSummary from '../components/OrderSummary.jsx';
-import EmptyState from '../components/EmptyState.jsx';
-// 2) Estilos de la vista.
-import '../styles/cart.css';
+import useLocalStorage from '../hooks/useLocalStorage.js';
 
-// 3) Componente para la ruta del carrito.
 export default function Cart() {
-    // 4) Carrito persistente: arreglo de items {id, name, price, qty}.
-    const [cart, setCart] = useLocalStorage('cart', []);
+    // items = [{ id, name, price, qty }]
+    const [items, setItems] = useLocalStorage('cart', []);
 
-    // 5) Elimina por id.
-    const removeItem = (id) => setCart(cart.filter(i => i.id !== id));
-    // 6) Limpia todo el carrito.
-    const clearCart = () => setCart([]);
+    // 🔧 Reducir cantidad o eliminar si llega a 0
+    function handleRemove(id) {
+        setItems(prevItems =>
+            prevItems
+                .map(item =>
+                    item.id === id
+                        ? { ...item, qty: item.qty - 1 }
+                        : item
+                )
+                .filter(item => item.qty > 0)
+        );
+    }
 
-    // 7) Render: título y contenido según haya items o no.
+    // 🔧 Vaciar carrito completo
+    function handleClear() {
+        setItems([]);
+    }
+
     return (
-        <section className="cart">
-            <h1 className="cart__title">Tu pedido</h1>
-            {cart.length ? (
-                <OrderSummary items={cart} onRemove={removeItem} onClear={clearCart} />
-            ) : (
-                <EmptyState message="Tu carrito está vacío." />
-            )}
-        </section>
+        <div className="cart">
+            <h2>Carrito</h2>
+            <OrderSummary
+                items={items}
+                onRemove={handleRemove}
+                onClear={handleClear}
+            />
+        </div>
     );
 }
